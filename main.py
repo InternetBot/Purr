@@ -11,5 +11,10 @@ def main_screen():
     print(f"\n✅ Target set to: {target_input}")
     print_separator("🔍 Preparing for Fuzzing...")
 
+
+# specify wordlist to run or install wordlist with 
+# 0 to add wordlist 
+# to install wordlist 
+
 if __name__ == "__main__":
     main_screen()
