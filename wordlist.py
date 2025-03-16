@@ -81,5 +81,7 @@ def download_word():
 
 print_separator("🚀 Wordlist Installation Script Started")
 
-if not verify_checker():
-    download_word()
+# for testing putpose
+
+# if not verify_checker():
+#     download_word()
