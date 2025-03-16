@@ -55,7 +55,10 @@ def download_word():
             print_separator("⚠️ Directory still missing, trying to reinstall wordlists...")
 
             reinstall_wordlist = subprocess.run(
-                #now this should work but idk why it's ot questioning if this should even be done in python or bash
+                #now this should work but idk why it's not questioning if this should even be done in python or bash
+                #now for whatever reason if u rm -rf your wordlist this wont work 
+                #idk why i tried fixing it cause thats what i did to test it but didnt work
+                #i need to come up with a more appropriate solution to do this
                 ["sudo", "apt", "install", "--reinstall", "wordlists", "-y", "-v"],
                 capture_output=True,
                 text=True
