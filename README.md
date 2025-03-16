@@ -1,6 +1,6 @@
 # 🐱 Purr - The Ultimate Fuzzing Helper 🐾
 
-## STILL IN PROGRESS 
+## STILL IN PROGRESS - EMOJI OVERLOAD INCOMING 
 
 
 Have you ever **forgotten** the command to fuzz a directory? 😵‍💫  
