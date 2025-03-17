@@ -8,6 +8,7 @@ def main_screen():
     '''
     print_separator ("🐱 Welcome to Purr 🐾")
 
+    #need to sanitize user input for http https or neither 
     target_input = input("🎯 Enter your target IP address or URL: ")
     print(f"\n✅ Target set to: {target_input}")
 
