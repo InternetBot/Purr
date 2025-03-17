@@ -7,8 +7,13 @@ def main_screen():
     main screen when you run command 
     '''
     print_separator ("🐱 Welcome to Purr 🐾")
+
     target_input = input("🎯 Enter your target IP address or URL: ")
     print(f"\n✅ Target set to: {target_input}")
+
+    word_list = input(" 📂 Enter your wordlist directory: ")
+    print(f"\n✅ Wordlist set to: {word_list}")
+
     print_separator("🔍 Preparing for Fuzzing...")
 
 
