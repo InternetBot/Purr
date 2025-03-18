@@ -1,6 +1,8 @@
 import subprocess
 import os
 
+# god i suck at naming this whole code  installs the wordlist 
+
 def print_separator(title):
     '''
     for decoration 
