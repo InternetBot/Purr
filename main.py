@@ -2,6 +2,7 @@ from wordlist import print_separator
 from wordlist import verify_checker
 from wordlist import download_word
 from dirfuzz import directory_fuzzing
+from verifywordlist import verify_wordlist
 
 def main_screen():
     '''
@@ -14,6 +15,7 @@ def main_screen():
     print(f"\n✅ Target set to: {target_input}")
 
     word_list = input(" 📂 Enter your wordlist directory: ")
+    wordlist = verify_wordlist(word_list)
     print(f"\n✅ Wordlist set to: {word_list}")
 
     print_separator("🔍 Preparing for Fuzzing...")
