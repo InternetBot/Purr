@@ -6,7 +6,11 @@ def verify_wordlist(word_list):
     '''
     if not word_list:
         print("⚠️ No wordlist provided! Using default: /usr/share/wordlists/")
-        return "/usr/share/wordlists"
+        return "/usr/share/wordlists/dirbuster/directory-list-2.3-small.txt "
+
+
+    #test word list /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt 
+
 
     return word_list
 
