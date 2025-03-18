@@ -28,20 +28,20 @@ def directory_fuzzing(target_input, word_list):
     if file_size_filter:
         fuzz_commands.extend(["-fs", file_size_filter])
     if response_codes:
-        fuzz_command.extend(["-mc", response_codes])
+        fuzz_commands.extend(["-mc", response_codes])
 
     print(f"\n🔍 Running fuzzing on: {target_input}")
     print(f"📂 Using wordlist: {word_list}")
     print(f"🛠️ Command: {' '.join(fuzz_commands)}\n")
 
     #execute the command 
-    dir_fuzz_process = subprocess.run(fuzz_command, capture_output=True, text=True)
+    dir_fuzz_process = subprocess.run(fuzz_commands, capture_output=True, text=True)
 
-    print("🔵 Fuzzing Output:\n", process.stdout)
+    print("🔵 Fuzzing Output:\n", dir_fuzz_process.stdout)
 
     if dir_fuzz_process.returncode == 0:
         print("✅ Fuzzing Completed Successfully!")
     else:
         print("❌ Fuzzing Failed! Check errors below.")
-        print("🔴 Error:", process.stderr)
+        print("🔴 Error:", dir_fuzz_process.stderr)
 
