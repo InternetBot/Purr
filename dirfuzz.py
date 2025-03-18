@@ -4,7 +4,7 @@
 import subprocess
 from wordlist import print_separator
 
-def directory_fuzzing():
+def directory_fuzzing(target_input, word_list):
     '''
     Basic dir fuzzing like, 19.10.10.10/fuzz
     '''
@@ -32,7 +32,7 @@ def directory_fuzzing():
 
     print(f"\n🔍 Running fuzzing on: {target_input}")
     print(f"📂 Using wordlist: {word_list}")
-    print(f"🛠️ Command: {' '.join(fuzz_command)}\n")
+    print(f"🛠️ Command: {' '.join(fuzz_commands)}\n")
 
     #execute the command 
     dir_fuzz_process = subprocess.run(fuzz_command, capture_output=True, text=True)
@@ -44,3 +44,4 @@ def directory_fuzzing():
     else:
         print("❌ Fuzzing Failed! Check errors below.")
         print("🔴 Error:", process.stderr)
+
