@@ -1,6 +1,7 @@
 from wordlist import print_separator
 from wordlist import verify_checker
 from wordlist import download_word
+from dirfuzz import directory_fuzzing
 
 def main_screen():
     '''
@@ -17,10 +18,40 @@ def main_screen():
 
     print_separator("🔍 Preparing for Fuzzing...")
 
+    return target_input, word_list
+
+def options_screen(target_input, word_list):
+    '''
+    Display options for selecting opteions
+    '''
+    print_separator(" 🔽 Select an Option 🔽 ")
+    print("1️⃣ Directory Fuzzing")
+    print("2️⃣ Subdomain Fuzzing")
+    print("0️⃣ Exit")
+
+    option_input = input("\n🔷 Enter your choice: ")
+
+    if option_input == "1":
+        directory_fuzzing(target_input, word_list)
+    if option_input == "2":
+        # do nothing havent written code yet
+        print("Coming soon")
+    if option_input == "0":
+        #exit
+        exit()
+    else:
+        print("❌ Invalid choice! Please select a valid option.")
+        options_screen(target_input, word_list)
+
+
+
 
 # specify wordlist to run or install wordlist with 
 # 0 to add wordlist 
 # to install wordlist 
 
 if __name__ == "__main__":
-    main_screen()
+    
+    # idk this made me a lil confused google said so 
+    target_input, word_list = main_screen()
+    options_screen(target_input, word_list)
