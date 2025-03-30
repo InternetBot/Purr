@@ -1,4 +1,6 @@
 # 🐱 Purr - The Ultimate Fuzzing Helper 🐾
+# Development stopped someone pointed out i can just do this in bash so revamp here i come 
+
 
 ## STILL IN PROGRESS - EMOJI OVERLOAD INCOMING 
 
